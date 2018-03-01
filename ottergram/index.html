@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Jonathan Vega
+     CPSC 473 Front end web design
+     January 27, 2018    -->
+<!-- Defines the doctype. It tells the browser which version of HTML the document is written in. Here the doctype specifies HTML 5. -->
+<html>
+
+<head>
+  <!-- Holds information about the document and how the browser should handle the document. -->
+  <meta charset="utf-8">
+  <!-- Provides the browser with information about the document itself, such as the name of the document's author or keywords for search engines.-->
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+  <title>ottergram</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <!-- The link tag is how you attach an external stylesheet to an HTML document -->
+  <!-- rel or Relation, is an attribute of the link tag. setting rel to "stylesheet" lets the browser know that the linked document provides styling info.-->
+  <!-- href attribute tells the browser to send a request to the server for the style.css file located in the stylesheets folder.-->
+</head>
+
+<body>
+  <!-- Holds all the HTML code that represents the content of your page. -->
+  <header class="main-header">
+    <h1 class="logo-text">ottergram</h1>
+  </header>
+  <main class="main-content">
+    <!--
+    <ul class="left-arrow">
+      <button type="button" onclick="alert('left')"> &lt;</button>
+    </ul>
+    <ul class="right-arrow">
+
+        <button type="button" onclick="alert('right')"> &gt;</button>
+    </ul>
+  -->
+    <ul class="thumbnail-list">
+      <!-- Unordered list -->
+      <li class="thumbnail-item">
+        <!-- List -->
+        <a href="img/otter1.jpg" data-image-role="trigger" data-image-title="Stayin' Alive" data-image-url="img/otter1.jpg">
+          <!-- The <a> is an anchor tag. This makes elements clickable so they can take the user to another page. -->
+          <!--img src="img/otter1.jpg" alt="Barry the Otter"-->
+          <!-- Image tag. Src attribute and alt attribute for incase the image is not available. -->
+          <img class="thumbnail-image" src="img/otter1.jpg" alt="Barry the Otter">
+          <!--span>Barry</span-->
+          <!-- Span tags do not have any special meaning. They are just used as a container. -->
+          <span class="thumbnail-title">Barry</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter2.jpg" data-image-role="trigger" data-image-title="How Deep Is Your Love" data-image-url="img/otter2.jpg">
+          <!-- The href attribute is used to indicate the resource the anchor points to-->
+          <!--img src="img/otter2.jpg" alt="Robin the Otter"-->
+          <img class="thumbnail-image" src="img/otter2.jpg" alt="Robin the Otter">
+          <!--span>Robin</span-->
+          <span class="thumbnail-title">Robin</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter3.jpg" data-image-role="trigger" data-image-title="You Should Be Dancing" data-image-url="img/otter3.jpg">
+          <!--img src="img/otter3.jpg" alt="Maurice the Otter"-->
+          <img class="thumbnail-image" src="img/otter3.jpg" alt="Maurice the Otter">
+          <!--span>Maurice</span-->
+          <span class="thumbnail-title">Maurice</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter4.jpg" data-image-role="trigger" data-image-title="Night Fever" data-image-url="img/otter4.jpg">
+          <!--img src="img/otter4.jpg" alt="Lesley the Otter"-->
+          <img class="thumbnail-image" src="img/otter4.jpg" alt="Lesley the Otter">
+          <!--span>Lesley</span-->
+          <span class="thumbnail-title">Lesley</span>
+        </a>
+      </li>
+      <li class="thumbnail-item">
+        <a href="img/otter5.jpg" data-image-role="trigger" data-image-title="To Love Somebody" data-image-url="img/otter5.jpg">
+          <!--img src="img/otter5.jpg" alt="Barbara the Otter"-->
+          <img class="thumbnail-image" src="img/otter5.jpg" alt="Barbara the Otter">
+          <!--span>Barbara</span-->
+          <span class="thumbnail-title">Barbara</span>
+        </a>
+      </li>
+      <!--     -->
+      <li class="thumbnail-item">
+        <a href="img/FlexBoxFroggyQ24.png" data-image-role="trigger" data-image-title="Two Out of Three Ain't Bad" data-image-url="img/FlexBoxFroggyQ24.png">
+    <img class="thumbnail-image" src="img/FlexBoxFroggyQ24.png" alt="Flex Frog">
+    <span class="thumbnail-title">Flex Frog</span>
+    </a>
+      </li>
+
+      <li class="thumbnail-item">
+        <a href="img/GridGardenQ28.png" data-image-role="trigger" data-image-title="Where the Lines Overlap" date-image-url="img/GridGardenQ28.png">
+    <img class="thumbnail-image" src="img/GridGardenQ28.png" alt="Grid Garden">
+    <span class="thumbnail-title">Grid Garden</span>
+    </a>
+      </li>
+    </ul>
+    <div class="detail-image-container">
+      <div class="detail-image-frame">
+        <img class="detail-image" data-image-role="target" src="img/otter1.jpg" alt="">
+        <span class="detail-image-title" data-image-role="title">Stayin' Alive</span>
+      </div>
+    </div>
+
+    <div class="left-arrow-containter">
+      <div class="left-arrow">
+        <!--button type="button" onclick="alert('left')"> &lt;</button-->
+        <button id="left" onclick="reply_click(this.id)">&lt;</button>
+      </div>
+    </div>
+
+    <div class="right-arrow-containter">
+      <div class="right-arrow">
+        <!-- button type="button" onclick="alert('right')"> &gt;</button   credit goes to shamittomar on StackOverflow.  -->
+        <button id="right" onclick="reply_click(this.id)">&gt;</button>
+      </div>
+    </div>
+
+
+
+  </main>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
