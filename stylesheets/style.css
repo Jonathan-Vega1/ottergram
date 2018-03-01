@@ -1,10 +1,7 @@
 @font-face {
   font-family: 'airstreameregular';
   src: url('fonts/Airstream-webfont.eot');
-  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/Airstream-webfont.woff') format('woff'),
-  url('fonts/Airstream-webfont.ttf') format('truetype'),
-  url('fonts/Airstream-webfont.svg#airstreameregular') format('svg');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Airstream-webfont.woff') format('woff'), url('fonts/Airstream-webfont.ttf') format('truetype'), url('fonts/Airstream-webfont.svg#airstreameregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,29 +9,25 @@
 @font-face {
   font-family: 'lakeshore';
   src: url('fonts/LAKESHOR-webfont.eot');
-  src: url('fonts/LAKESHOR-webfont.eot?#iefix;') format('embedded-opentype'),
-       url('fonts/LAKESHOR-webfont.woff') format('woff'),
-       url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
-       url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+  src: url('fonts/LAKESHOR-webfont.eot?#iefix;') format('embedded-opentype'), url('fonts/LAKESHOR-webfont.woff') format('woff'), url('fonts/LAKESHOR-webfont.ttf') format('truetype'), url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 html, body {
-height: 100%;
+  height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-
   font-size: 10px;
-  background-color: rgb(202,179,159);
+  background-color: rgb(202, 179, 159);
   /* background-color: rgb(149,194,215); */
 }
 
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .main-header {
@@ -43,7 +36,6 @@ text-decoration: none;
 
 .logo-text {
   background: white;
-
   text-align: center;
   text-transform: uppercase;
   font-family: lakeshore;
@@ -52,7 +44,8 @@ text-decoration: none;
 
 .main-content {
   flex: 1 1 auto;
-  display: flex;  /* this line kept messing up my page.  */
+  display: flex;
+  /* this line kept messing up my page.  */
   flex-direction: column;
 }
 
@@ -62,7 +55,7 @@ text-decoration: none;
   max-width: 120px;
   border: 1px solid rgb(100%, 100%, 100%);
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
-  }
+}
 
 .thumbnail-list {
   flex: 0 1 auto;
@@ -73,7 +66,6 @@ text-decoration: none;
   /* */
   list-style: none;
   padding: 0;
-
   white-space: nowrap;
   overflow-x: auto;
 }
@@ -88,11 +80,11 @@ text-decoration: none;
   margin: 0;
   padding: 4px 10px;
   /*background: rgb(96,125,139); */
-  background-color: rgb(190,179,159);
-  color: rgb(202,238,255);
+  background-color: rgb(190, 179, 159);
+  color: rgb(202, 238, 255);
   /* color: rgb(110,103,210); */
   font-size: 18px;
-/* */
+  /* */
 }
 
 .detail-image-container {
@@ -100,7 +92,7 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-/*   */
+  /*   */
 }
 
 .detail-image-frame {
@@ -118,6 +110,38 @@ text-decoration: none;
   left: 4px;
   font-family: airstreameregular;
   color: white;
-  text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
   font-size: 40px;
+}
+
+@media all and (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .thumbnail-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+  }
+  thumbnail-item {
+    max-width: 260px;
+  }
+  .thumbnail-item+.thumbnail-item {
+    margin-top: 20px;
+  }
+}
+
+/*   new stuff */
+
+.left-arrow {
+  position: absolute;
+  bottom: 243px;
+  left: 460px;
+}
+
+.right-arrow {
+  position: absolute;
+  bottom: 243px;
+  right: 299px;
 }
